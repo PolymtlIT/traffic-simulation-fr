@@ -38,21 +38,21 @@ cd $startDir
 # (undo changes for BaWue files which are only in German, i.e., 
 # *_ger already in engl redirect)
 
-cp js/redirect.js js/redirect_ger.js
-perl -i -p -e "s/\.html/_ger.html/g" js/redirect_ger.js
-perl -i -p -e "s/_ger_ger/_ger/g" js/redirect_ger.js
+cp js/redirect.js js/redirect_fr.js
+perl -i -p -e "s/\.html/_fr.html/g" js/redirect_fr.js
+perl -i -p -e "s/_fr_fr/_fr/g" js/redirect_fr.js
 
-cp js/control_gui.js js/control_gui_ger.js
-perl -i -p -e "s/\.html/_ger.html/g" js/control_gui_ger.js
+cp js/control_gui.js js/control_gui_fr.js
+perl -i -p -e "s/\.html/_fr.html/g" js/control_gui_ger.js
 
 
 # copy+change strings for project-specific German js and html files 
 
-htmlfilesGer=""
+htmlfilesFr=""
 
-jsfilesGer="js/timeView_ger.js js/stationaryDetector_ger.js"
-cp js/timeView.js js/timeView_ger.js 
-cp js/stationaryDetector.js js/stationaryDetector_ger.js 
+jsfilesGer="js/timeView_fr.js js/stationaryDetector_fr.js"
+cp js/timeView.js js/timeView_fr.js 
+cp js/stationaryDetector.js js/stationaryDetector_fr.js 
 
 
 for proj in $projects; do
